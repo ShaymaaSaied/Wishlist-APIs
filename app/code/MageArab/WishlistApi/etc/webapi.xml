@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) Shaymaa Saied  24/03/2021, 00:52.
+  -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/mage/wishlist/items" method="GET">
+        <service class="MageArab\WishlistApi\Api\WishlistManagementInterface" method="getWishlistItems"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/mage/wishlist/add/:productSku" method="POST">
+        <service class="MageArab\WishlistApi\Api\WishlistManagementInterface" method="addItem"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/mage/wishlist/delete/:wishlistItemId" method="DELETE">
+        <service class="MageArab\WishlistApi\Api\WishlistManagementInterface" method="removeItem"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/mage/wishlist/delete-item/:productSku" method="DELETE">
+        <service class="MageArab\WishlistApi\Api\WishlistManagementInterface" method="removeBySku"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+</routes>
