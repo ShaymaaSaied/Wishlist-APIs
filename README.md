@@ -2,7 +2,8 @@
 
 ### This is a Magento 2 Extension to add wishlist rest APIs
 
-### Suppoted APIs
+### Supported APIs
+
 
 | Desc | Api |
 | ------ | ------ |
