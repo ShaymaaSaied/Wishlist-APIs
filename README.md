@@ -7,7 +7,7 @@
 
 | Desc | Api |
 | ------ | ------ |
-| Add prdouct to Customer Wishlist | [/V1/mage/wishlist/add/:productSku][PlDb] |
-| Delete item from customer Wishlist | [/V1/mage/wishlist/delete/:wishlistItemId][PlGh] |
-| List Wishlist items | [/V1/mage/wishlist/items][PlGd] |
-| Remove product from whishlist by product SKU| [/V1/mage/wishlist/delete-item/:productSku][PlOd] |
+| Add prdouct to Customer Wishlist | /V1/mage/wishlist/add/:productSku] |
+| Delete item from customer Wishlist | /V1/mage/wishlist/delete/:wishlistItemId |
+| List Wishlist items | /V1/mage/wishlist/items |
+| Remove product from whishlist by product SKU| /V1/mage/wishlist/delete-item/:productSku |
